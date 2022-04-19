@@ -8,6 +8,9 @@ const port = process.env.PORT || 5000
 app.use(express.json())
 app.use(cors())
 connection()
+app.get("/",(req,res) => {
+    res.send("hello backend is running")
+})
 app.use("/api/user",users)
 app.use("/api/worker",workers)
 // app.get('/', (req, res) => res.send('Hello World!'))
